@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Sports Arena</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f2027;
+    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    color: white;
+    line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+}
+
+nav h1 {
+    font-size: 24px;
+    color: #00f5d4;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00f5d4;
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero span {
+    color: #00f5d4;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 30px;
+    background: #00f5d4;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+/* Sports Cards Section */
+.section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 20px;
+    transition: 0.4s;
+    backdrop-filter: blur(6px);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(0, 245, 212, 0.2);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #00f5d4;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.5);
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>🏆 Elite Sports</h1>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div>
+        <h2>Unleash Your <span>Champion</span> Within</h2>
+        <p>Experience the thrill of sports like never before. Stay updated with live scores, tournaments, and athlete highlights.</p>
+        <button class="btn">Explore Now</button>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Popular Sports</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>⚽ Football</h3>
+            <p>Feel the passion of the world's most loved sport with live match updates and team stats.</p>
+        </div>
+        <div class="card">
+            <h3>🏀 Basketball</h3>
+            <p>Fast-paced action and buzzer beaters. Stay connected with your favorite teams.</p>
+        </div>
+        <div class="card">
+            <h3>🏏 Cricket</h3>
+            <p>From T20 thrillers to Test classics — enjoy every boundary and wicket.</p>
+        </div>
+        <div class="card">
+            <h3>🎾 Tennis</h3>
+            <p>Grand slams, intense rallies, and legendary players in one place.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Elite Sports Arena | Designed with ❤️ for Sports Lovers</p>
+</footer>
+
+</body>
+</html>
