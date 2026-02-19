@@ -1,191 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elite Sports Arena</title>
+    <meta charset="UTF-8">
+    <title>Sports World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS Inside Same File -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+        body {
+            line-height: 1.6;
+        }
 
-body {
-    background: #0f2027;
-    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
-    color: white;
-    line-height: 1.6;
-}
+        /* Header */
+        header {
+            background: #111;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(8px);
-}
+        header h1 {
+            font-size: 24px;
+        }
 
-nav h1 {
-    font-size: 24px;
-    color: #00f5d4;
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
+        nav ul li {
+            margin-left: 20px;
+        }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    transition: 0.3s;
-}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
 
-nav ul li a:hover {
-    color: #00f5d4;
-}
+        nav ul li a:hover {
+            color: #f39c12;
+        }
 
-/* Hero Section */
-.hero {
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url('https://images.unsplash.com/photo-1505842465776-3acb1b2d3b33') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
 
-.hero h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
 
-.hero span {
-    color: #00f5d4;
-}
+        .hero button {
+            padding: 10px 20px;
+            background: #f39c12;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-.hero p {
-    max-width: 600px;
-    margin: auto;
-    margin-bottom: 30px;
-}
+        .hero button:hover {
+            background: #d35400;
+        }
 
-.btn {
-    padding: 12px 30px;
-    background: #00f5d4;
-    color: #000;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s;
-}
+        /* Sports Sections */
+        .sports-section {
+            padding: 60px 20px;
+            text-align: center;
+        }
 
-.btn:hover {
-    background: white;
-    transform: scale(1.05);
-}
+        .sports-section:nth-child(even) {
+            background: #f4f4f4;
+        }
 
-/* Sports Cards Section */
-.section {
-    padding: 60px 10%;
-    text-align: center;
-}
+        .sports-section h2 {
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
 
-.section h2 {
-    margin-bottom: 40px;
-    font-size: 36px;
-}
+        /* Cards */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
+        .card {
+            background: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
 
-.card {
-    background: rgba(255,255,255,0.08);
-    padding: 30px;
-    border-radius: 20px;
-    transition: 0.4s;
-    backdrop-filter: blur(6px);
-}
+        .card:hover {
+            transform: translateY(-10px);
+        }
 
-.card:hover {
-    transform: translateY(-10px);
-    background: rgba(0, 245, 212, 0.2);
-}
+        /* Contact */
+        .contact {
+            padding: 60px 20px;
+            background: #222;
+            color: white;
+            text-align: center;
+        }
 
-.card h3 {
-    margin-bottom: 15px;
-    color: #00f5d4;
-}
+        .contact form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0,0,0,0.5);
-    margin-top: 40px;
-}
-</style>
+        .contact input,
+        .contact textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            padding: 10px;
+            background: #f39c12;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .contact button:hover {
+            background: #d35400;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 10px;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<nav>
-    <h1>🏆 Elite Sports</h1>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Sports</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
+    <header>
+        <h1>Sports World</h1>
+        <nav>
+            <ul>
+                <li><a href="#football">Football</a></li>
+                <li><a href="#basketball">Basketball</a></li>
+                <li><a href="#cricket">Cricket</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section class="hero">
-    <div>
-        <h2>Unleash Your <span>Champion</span> Within</h2>
-        <p>Experience the thrill of sports like never before. Stay updated with live scores, tournaments, and athlete highlights.</p>
-        <button class="btn">Explore Now</button>
-    </div>
-</section>
+    <section class="hero">
+        <h2>Welcome to the Ultimate Sports Hub</h2>
+        <p>Latest news, teams, and highlights from around the world.</p>
+        <button>Explore Now</button>
+    </section>
 
-<section class="section">
-    <h2>Popular Sports</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>⚽ Football</h3>
-            <p>Feel the passion of the world's most loved sport with live match updates and team stats.</p>
+    <section id="football" class="sports-section">
+        <h2>Football</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Top Teams</h3>
+                <p>Explore the best football clubs around the world.</p>
+            </div>
+            <div class="card">
+                <h3>World Cup</h3>
+                <p>The biggest football tournament in the world.</p>
+            </div>
         </div>
-        <div class="card">
-            <h3>🏀 Basketball</h3>
-            <p>Fast-paced action and buzzer beaters. Stay connected with your favorite teams.</p>
-        </div>
-        <div class="card">
-            <h3>🏏 Cricket</h3>
-            <p>From T20 thrillers to Test classics — enjoy every boundary and wicket.</p>
-        </div>
-        <div class="card">
-            <h3>🎾 Tennis</h3>
-            <p>Grand slams, intense rallies, and legendary players in one place.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<footer>
-    <p>© 2026 Elite Sports Arena | Designed with ❤️ for Sports Lovers</p>
-</footer>
+    <section id="basketball" class="sports-section">
+        <h2>Basketball</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>NBA</h3>
+                <p>Watch the most exciting basketball league.</p>
+            </div>
+            <div class="card">
+                <h3>Top Players</h3>
+                <p>Discover legendary basketball players.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cricket" class="sports-section">
+        <h2>Cricket</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>IPL</h3>
+                <p>India’s biggest cricket league.</p>
+            </div>
+            <div class="card">
+                <h3>World Cup</h3>
+                <p>International cricket competition.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 Sports World | All Rights Reserved</p>
+    </footer>
 
 </body>
 </html>
